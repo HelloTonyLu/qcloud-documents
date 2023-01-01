@@ -56,6 +56,10 @@ sudo chown -R ftpuser:ftpuser /var/ftp/test
 ```
 sudo vim /etc/vsftpd/vsftpd.conf
 ```
+如果轻量应用服务器是Ubuntu 20.04 64位操作系统，那么执行以下命令，打开 `vsftpd.conf` 文件。
+```
+sudo vim /etc/vsftpd.conf
+```
 6. 按 **i** 切换至编辑模式，根据实际需求选择 FTP 模式，修改配置文件 `vsftpd.conf`：[](id:config)
 <dx-alert infotype="notice" title="">
 FTP 可通过主动模式和被动模式与客户端机器进行连接并传输数据。由于大多数客户端机器的防火墙设置及无法获取真实 IP 等原因，建议您选择**被动模式**搭建 FTP 服务。如下修改以设置被动模式为例，您如需选择主动模式，请前往 [设置 FTP 主动模式](#port)。
